@@ -1,4 +1,4 @@
-section#content, footer {
+section#content {
     margin-top:50px;
 }
 
@@ -17,7 +17,7 @@ section#featured {
 
 /* Carousel left/right styling rules */
 section#featured div a {
-    font-size:30px;
+    font-size:3em;
 }
 
 section#featured div a:hover {
@@ -26,14 +26,14 @@ section#featured div a:hover {
 
 section#featured div a#left {
     position:absolute;
-    top: calc(50% - 30px);
+    top: calc(50% - 2ex);
     left:30px;
 }
 
 section#featured div a#right {
     position:absolute;
-    top: calc(50% - 30px);
-    right:30px
+    top: calc(50% - 2ex);
+    right:30px;
 }
 
 /* Ref. to div container for carousel text */
@@ -43,4 +43,10 @@ section#featured div div {
 
 footer {
     padding:40px;
+    margin-top: auto;
+}
+
+.row {
+    margin-left: 0!important;
+    margin-right: 0!important;
 }
