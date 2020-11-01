@@ -29,3 +29,7 @@ img {
 a:hover {
     text-decoration:none;
 }
+
+section#subscription {
+    background-color:#e2e2e235;
+}

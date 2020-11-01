@@ -1,4 +1,4 @@
-section#content main {
+section#content main,  section#content > section {
     border-right:1px solid #e8e9ea;
 }
 
@@ -14,7 +14,7 @@ section#content main {
     }
 }
 
-section#content main article {
+section#content main article, section#content section article {
     overflow-wrap:anywhere;
     hyphens:auto;
     border-bottom:1px solid #e8e9ea;
@@ -38,8 +38,4 @@ section#content main article:hover {
 
 section#content aside {
     margin-left:20px;
-}
-
-section#subscription {
-    background-color:#e2e2e235;
 }
