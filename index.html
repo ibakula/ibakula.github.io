@@ -40,7 +40,7 @@
     </nav>
 </header>
 
-<section class="row justify-content-sm-center align-items-sm-center" id="featured">
+<section class="row justify-content-sm-center align-items-sm-center mb-5" id="featured">
     <div>
         <!-- ToDo: script scroll controls -->
         <a id="right" href="#">&gt;</a>
@@ -53,7 +53,7 @@
     </div>
 </section>
     
-<section id="content" class="row container-fluid">
+<section id="content" class="row container-fluid mb-5">
     <main class="col-sm">
         <article class="row">
             <div class="col-sm-auto"><img alt="Article image" src="https://cdn.pixabay.com/photo/2014/05/02/23/46/bridge-336475_960_720.jpg" width="160px" height="100px" /></div>
@@ -86,23 +86,36 @@
     </main>
     
     <aside class="col-sm-auto">
-        <h3>Most popular</h3>
+        <h3><em>Most popular</em></h3>
         <article>
             <img alt="Side article image" src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="250px" height="150px" style="margin-bottom:10px;" />
             <a href="article.html"><h3>Short title</h3></a>
-            <p>Short description</p>
+            <p class="lead">Short description</p>
         </article>
         <article>
             <img alt="Side article image" src="https://cdn.pixabay.com/photo/2020/01/20/20/39/car-4781370_960_720.jpg" width="250px" height="150px" style="margin-bottom:10px;" />
             <a href="article.html"><h3>Short title</h3></a>
-            <p>Short description</p>
+            <p class="lead">Short description</p>
         </article>
         <article>
             <img alt="Side article image" src="https://cdn.pixabay.com/photo/2015/10/18/17/42/money-994845_960_720.jpg" width="250px" height="150px" style="margin-bottom:10px;" />
             <a href="article.html"><h3>Short title</h3></a>
-            <p>Short description</p>
+            <p class="lead">Short description</p>
         </article>
     </aside>
+</section>
+
+<section id="subscription" class="container-fluid mb-5 p-4">
+    <div class="col-sm-4">
+        <h3 class="display-5">Subscribe to our content</h3>
+        <form class="ml-4">
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="lead">Email address</label>
+                <input type="email" class="form-control form-control-md" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </section>
 
 <footer class="bg-light"><a href="#top">Go to top!</a></footer>

@@ -39,3 +39,7 @@ section#content main article:hover {
 section#content aside {
     margin-left:20px;
 }
+
+section#subscription {
+    background-color:#e2e2e235;
+}
