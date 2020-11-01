@@ -8,6 +8,10 @@ section#featured {
 }
 
 /* Carousel left/right styling rules */
+section#featured div div {
+    text-align:center;
+}
+
 section#featured div a {
     font-size:3em;
 }
@@ -24,13 +28,13 @@ section#featured div a#left {
 
 section#featured div a#right {
     position:absolute;
-    top: calc(50% - 2ex);
+    top:calc(50% - 2ex);
     right:30px;
 }
 
 /* Ref. to div container for carousel text */
-section#featured div div {
-    text-align:center;
+section#featured div div h2{
+    display:inline;
     z-index:5;
 }
 

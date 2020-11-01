@@ -6,11 +6,14 @@ header#top > div {
     width:100%;
 }
 
-header#top div nav div, 
-header#top div nav div > div, 
-header#top div nav div div ul,
-header#top div nav div div ul li ul {
+header#top nav,
+header#top nav div ul,
+header#top nav div ul li ul {
     width:100%;
+}
+
+header#top nav div {
+    flex-grow: 1;
 }
 
 header#top div nav div div ul li + li ul {
