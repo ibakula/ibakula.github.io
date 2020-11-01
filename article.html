@@ -91,9 +91,11 @@
         <h2>Comments section</h2>
                 
         <form>
-            <label for="comment_text">Enter a comment:</label><br />
-            <textarea id="comment_text" name="comment" placeholder="Select to start typing..." rows="6" style="width:500px;"></textarea><br /><br />
-            <input type="submit" value="Submit" />
+            <div class="form-group">
+                <label for="comment_text" class="lead">Enter a comment:</label>
+                <textarea id="comment_text" class="form-control form-control-md" name="comment" placeholder="Enter commentary..." rows="6" style="width:500px;"></textarea>
+            </div>
+            <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
         </form>
         <br /><br />
         <div>
