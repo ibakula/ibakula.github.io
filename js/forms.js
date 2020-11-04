@@ -1,22 +1,33 @@
 var subscription_form = document.getElementById("subscription_form");
 
 if (subscription_form != null) {
-    subscription_form.addEventListener("submit", handleSubscriptionFormSubmit);
+    subscription_form.addEventListener("submit", function(e) { handleFormSubmit(e, subscription_form.id) });
 }
 
-function handleSubscriptionFormSubmit(e) {
+function handleFormSubmit(e, formName) {
     e.preventDefault();
-    var subscription_output = document.getElementById("subscription_output");
+    var output = null;
+    var output_str = null;
+    var input = null;
     
-    if (subscription_output != null) {
-        var subscription_email_input = document.getElementById("subscription_email");
-        if (subscription_email_input != null)
-        {
-            console.log(subscription_email_input.value);
-            subscription_output.innerHTML = "<p class=\"lead text-center\">" + subscription_email_input.value + "</p>";
-            subscription_output.style.backgroundColor = "#c2ffb2";
-            subscription_output.className = subscription_output.classList + " " + "p-4";
+    switch(formName) {
+        case "subscription_form":
+        output_str = "subscription";
+        output_div = document.createElement("div");
+        output_div.id = output_str + "_output";
+        output_div.className = "p-4 mt-3";
+        subscription_form.parentElement.appendChild(output_div);
+        input = document.getElementById("subscription_email");
+        output = document.getElementById(output_str + "_output");
+        break;
+    }
+    
+    if (output != null) {
+        if (input != null) {
+            console.log(input.value);
+            output.innerHTML = "<p class=\"lead text-center\">" + input.value + "</p>";
+            output.style.backgroundColor = "#c2ffb2";
         }
-        else subscription_output.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
+        else output.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
     }
 }
