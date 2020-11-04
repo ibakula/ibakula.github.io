@@ -28,6 +28,9 @@ function handleFormSubmit(e, formName) {
             output.innerHTML = "<p class=\"lead text-center\">" + input.value + "</p>";
             output.style.backgroundColor = "#c2ffb2";
         }
-        else output.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
+        else {
+            output.style.backgroundColor = "#ffc2b2";
+            output.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
+        }
     }
 }
