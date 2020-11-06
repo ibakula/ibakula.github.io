@@ -1,16 +1,21 @@
-/* Subscription form-related code begin */
+var formsList = new Array();
 
-var subscription_form = document.getElementById("subscription_form");
-
-if (subscription_form != null) {
-    subscription_form.addEventListener("submit", function(e) { handleFormSubmit(e, subscription_form.id); });
+for (var i = 0; i < document.forms.length; ++i) {
+    if (document.forms.item(i) != null) {
+        formsList.push(document.forms[i]);
+    }
 }
 
-/* Registration form-related code begin */
-var register_form = document.getElementById("register_form");
+if (formsList != null && formsList.length > 0) {
+    formsList.forEach(_helperFuncAddEventListener);
+}
 
-if (register_form != null) {
-    register_form.addEventListener("submit", function(e) { handleFormSubmit(e, register_form.id); });
+function _helperFuncAddEventListener(item, index) {
+    item.addEventListener("submit", function(e) { handleFormSubmit(e, (item.id), (index)); } );
+}
+
+function _helperFuncFormSubmit(e, FormId, index) {
+    handleFormSubmit(e, FormId, index);
 }
 
 function fuseChildrenValuesToArray(childrenElements) {
@@ -18,58 +23,71 @@ function fuseChildrenValuesToArray(childrenElements) {
     
     for (var i = 0; i < childrenElements.length; ++i) {
         if (childrenElements[i].children[1] != null) {
-            simplified_data.push(register_form.children[i].children[1].value);
+            simplified_data.push(childrenElements[i].children[1].value);
         }
     }
     
     return simplified_data;
 }
 
-function handleFormSubmit(e, formName) {
+function _helperFuncUpdateOutputElement(outputName) {
+    var output_div = document.getElementById(outputName);
+    
+    if (output_div == null) {
+        output_div = document.createElement("div");
+        output_div.id = outputName;
+        output_div.className = "p-4 mt-3";
+    }
+    else {
+        if (output_div.childNodes.length > 0) {
+            output_div.removeChild(output_div.childNodes[0]);
+        }
+    }
+    
+    return output_div;
+}
+
+function handleFormSubmit(e, formName, formIndex) {
     e.preventDefault();
-    var output = null;
-    var output_str = null;
     var input = null;
-    var output_div = document.createElement("div");
+    var output_div = null;
+    var output_name = new String();
     
     switch(formName) {
         case "subscription_form":
-            output_str = "subscription";
-            output_div.id = output_str + "_output";
-            output_div.className = "p-4 mt-3";
-            subscription_form.parentElement.appendChild(output_div);
-            input = document.getElementById("subscription_email");
-            output = document.getElementById(output_str + "_output");
+            output_name = "subscription_output";
             break;
         case "register_form":
-            output_str = "register";
-            output_div.id = output_str + "_output";
-            output_div.className = "p-4 mt-3";
-            register_form.parentElement.appendChild(output_div);
-            input = fuseChildrenValuesToArray(register_form.children);
-            output = document.getElementById(output_str + "_output");
+            output_name = "register_output";
+            break;
+        case "login_form":
+            output_name = "login_output";
+            break;
+        case "commentary_form":
+            output_name = "commentary_output";
             break;
     }
     
-    if (output != null) {
+    if (output_name != "") {
+        output_div = _helperFuncUpdateOutputElement(output_name);
+        formsList[formIndex].parentElement.appendChild(output_div);
+        input = fuseChildrenValuesToArray(formsList[formIndex].children);
+    }
+    
+    console.log(output_div);
+    
+    if (output_div != null) {
         if (input != null) {
-            if (!Array.isArray(input)) {
-                console.log(input.value);
-                output.innerHTML = "<p class=\"lead text-center\">" + input.value + "</p>";
-            }
-            else {
-                var merged = "<p class=\"lead text-center\">";
-                input.forEach(function(currentValue) {
-                    console.log(currentValue);
-                    merged += currentValue + "<br>";
-                });
-                output.innerHTML += merged + "</p>";
-            }
-            output.style.backgroundColor = "#c2ffb2";
+            var merged = "<p class=\"lead text-center\">";
+            input.forEach(function(currentValue) {
+                merged += currentValue + "<br>";
+            });
+            output_div.innerHTML += merged + "</p>";
+            output_div.style.backgroundColor = "#c2ffb2";
         }
         else {
-            output.style.backgroundColor = "#ffc2b2";
-            output.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
+            output_div.style.backgroundColor = "#ffc2b2";
+            output_div.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
         }
     }
 }
