@@ -36,7 +36,7 @@ section#subscription {
 
 .form-control:focus {
     color:#495057;
-    border-color:#ced4da;
+    border-color:#ced4da!important;
     box-shadow:none;
 }
 
