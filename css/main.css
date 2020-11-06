@@ -33,3 +33,17 @@ a:hover {
 section#subscription {
     background-color:#e2e2e235;
 }
+
+.form-control:focus {
+    color:#495057;
+    border-color:#ced4da;
+    box-shadow:none;
+}
+
+.form-control:invalid {
+    border-color:#ffa1a1;
+}
+
+.form-control:not(:invalid) {
+    border-color:#ced4da!important;
+}
