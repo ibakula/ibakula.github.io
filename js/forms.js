@@ -74,13 +74,12 @@ function handleFormSubmit(e, formName, formIndex) {
         input = fuseChildrenValuesToArray(formsList[formIndex].children);
     }
     
-    console.log(output_div);
-    
     if (output_div != null) {
         if (input != null) {
             var merged = "<p class=\"lead text-center\">";
             input.forEach(function(currentValue) {
                 merged += currentValue + "<br>";
+                console.log(currentValue);
             });
             output_div.innerHTML += merged + "</p>";
             output_div.style.backgroundColor = "#c2ffb2";
