@@ -15,6 +15,8 @@ header#top div nav div div ul li + li ul {
 footer {
     padding:1.5em;
     text-align:center;
+    position:relative;
+    bottom:0px;
 }
 
 .row {

@@ -19,9 +19,6 @@
                         <li>
                             <a class="navbar-brand" href="index.html">&lt;&lt; The blog &gt;&gt;</a>
                         </li>
-                        <li>
-                            <a class="navbar-brand" href="register.html">&lt;&lt; You are reading on... &gt;&gt;</a>
-                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Homepage</a>
                         </li>
@@ -37,85 +34,91 @@
                         </li>
                     </ul>
                 </li>
+                <form class="form-inline my-2 my-lg-0 col-sm">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </ul>
         </div>
     </nav>
 </header>
 
-<section id="content" class="row" style="margin-top:50px;">
-    <section class="col-sm lead">
-        <article>
-            <p>Author</p>
-            <p class="text-muted"><time datetime="1914-12-20 08:30:45">December 12, 1994 at 8.30 am</time></p>
-            <img src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="430px" height="300px" /><br /><br />
-            <h1>Article title</h1>
-            <p>Topic-related content...<br />Topic related content..<br />Topic related content..
-            <br />Topic related content..<br />Topic related content..<br />Topic related content..
-            <br />Topic related content..</p>
-        </article>
+<div class="container-xl">
+    <section id="content" class="row" style="margin-top:50px;">
+        <section class="col-sm lead">
+            <article>
+                <p>Author</p>
+                <p class="text-muted"><time datetime="1914-12-20 08:30:45">December 12, 1994 at 8.30 am</time></p>
+                <img src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="430px" height="300px" /><br /><br />
+                <h1>Article title</h1>
+                <p>Topic-related content...<br />Topic related content..<br />Topic related content..
+                <br />Topic related content..<br />Topic related content..<br />Topic related content..
+                <br />Topic related content..</p>
+            </article>
+        </section>
+
+        <aside class="col-sm-auto">
+            <h3><em>Most popular</em></h3>
+            <article>
+                <img alt="Side article image" src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
+                <a href="article.html"><h3>Short title</h3></a>
+                <p class="lead">Short description</p>
+            </article>
+            <article>
+                <img alt="Side article image" src="https://cdn.pixabay.com/photo/2020/01/20/20/39/car-4781370_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
+                <a href="article.html"><h3>Short title</h3></a>
+                <p class="lead">Short description</p>
+            </article>
+            <article>
+                <img alt="Side article image" src="https://cdn.pixabay.com/photo/2015/10/18/17/42/money-994845_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
+                <a href="article.html"><h3>Short title</h3></a>
+                <p class="lead">Short description</p>
+            </article>
+            <hr />
+            <section>
+                <h3>Subscription</h3>
+                <form id="subscription_form">
+                    <div class="form-group">
+                        <label for="subscription_email" class="lead">Email address</label>
+                        <input type="email" class="form-control form-control-md" id="subscription_email" aria-describedby="emailHelp" minlength="5" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+        </aside>
     </section>
 
-    <aside class="col-sm-auto">
-        <h3><em>Most popular</em></h3>
-        <article>
-            <img alt="Side article image" src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
-            <a href="article.html"><h3>Short title</h3></a>
-            <p class="lead">Short description</p>
-        </article>
-        <article>
-            <img alt="Side article image" src="https://cdn.pixabay.com/photo/2020/01/20/20/39/car-4781370_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
-            <a href="article.html"><h3>Short title</h3></a>
-            <p class="lead">Short description</p>
-        </article>
-        <article>
-            <img alt="Side article image" src="https://cdn.pixabay.com/photo/2015/10/18/17/42/money-994845_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
-            <a href="article.html"><h3>Short title</h3></a>
-            <p class="lead">Short description</p>
-        </article>
-        <hr />
-        <section>
-            <h3>Subscription</h3>
-            <form id="subscription_form">
+    <section class="row justify-content-sm-center" style="margin-top:50px;background-color:#e3e3e3;padding-top:30px;padding-bottom:30px;">
+        <div class="col-sm">
+            <h2>Comments section</h2>
+                    
+            <form id="commentary_form">
                 <div class="form-group">
-                    <label for="subscription_email" class="lead">Email address</label>
-                    <input type="email" class="form-control form-control-md" id="subscription_email" aria-describedby="emailHelp" minlength="5" required />
+                    <label for="comment_text" class="lead">Enter a comment:</label>
+                    <textarea id="comment_text" class="form-control form-control-md" name="comment" placeholder="Enter commentary..." minlength="5" rows="6" style="width:500px;" required /></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
             </form>
-        </section>
-    </aside>
-</section>
-
-<section class="row justify-content-sm-center" style="margin-top:50px;background-color:#e3e3e3;padding-top:30px;padding-bottom:30px;">
-    <div class="col-sm">
-        <h2>Comments section</h2>
-                
-        <form id="commentary_form">
-            <div class="form-group">
-                <label for="comment_text" class="lead">Enter a comment:</label>
-                <textarea id="comment_text" class="form-control form-control-md" name="comment" placeholder="Enter commentary..." minlength="5" rows="6" style="width:500px;" required /></textarea>
+            <br /><br />
+            <div>
+                <p>Written by User on DD.MM.YYYY at HH:MM</p>
+                <p>Content of a comment written by the user</p>
             </div>
-            <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
-        </form>
-        <br /><br />
-        <div>
-            <p>Written by User on DD.MM.YYYY at HH:MM</p>
-            <p>Content of a comment written by the user</p>
+            <div>
+                <p>Written by User on DD.MM.YYYY at HH:MM</p>
+                <p>Content of a comment written by the user</p>
+            </div>
+            <div>
+                <p>Written by User on DD.MM.YYYY at HH:MM</p>
+                <p>Content of a comment written by the user</p>
+            </div>
+            <div>
+                <p>Written by User on DD.MM.YYYY at HH:MM</p>
+                <p>Content of a comment written by the user</p>
+            </div>
         </div>
-        <div>
-            <p>Written by User on DD.MM.YYYY at HH:MM</p>
-            <p>Content of a comment written by the user</p>
-        </div>
-        <div>
-            <p>Written by User on DD.MM.YYYY at HH:MM</p>
-            <p>Content of a comment written by the user</p>
-        </div>
-        <div>
-            <p>Written by User on DD.MM.YYYY at HH:MM</p>
-            <p>Content of a comment written by the user</p>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <footer class="bg-light"><a href="#top">Go to top!</a></footer>
 </body>
