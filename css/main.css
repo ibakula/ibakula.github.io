@@ -38,14 +38,18 @@ section#subscription {
 
 .form-control:focus {
     color:#495057;
-    border-color:#ced4da!important;
+    border-color:#ced4da;
     box-shadow:none;
 }
 
-.form-control:invalid {
-    border-color:#ffa1a1;
+input[type="text"]:valid, input[type="password"]:valid, input[type="email"]:valid {
+    border-color:#ced4da;
 }
 
-.form-control:not(:invalid) {
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
     border-color:#ced4da!important;
+}
+
+input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid {
+    border-color:#ffa1a1;
 }
