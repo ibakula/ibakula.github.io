@@ -42,14 +42,14 @@ section#subscription {
     box-shadow:none;
 }
 
-input[type="text"]:valid, input[type="password"]:valid, input[type="email"]:valid {
+input[type="text"]:valid, input[type="password"]:valid, input[type="email"]:valid, textarea.form-control:valid {
     border-color:#ced4da;
 }
 
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea.form-control:focus {
     border-color:#ced4da!important;
 }
 
-input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid {
+input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid, textarea:invalid {
     border-color:#ffa1a1;
 }
