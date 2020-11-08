@@ -1,7 +1,3 @@
-section#content section {
-    border:none;
-}
-
 section#content section a h2:hover {
     content: " ";
     color:black!important;
