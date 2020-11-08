@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/content.css">
-<script src="js/forms.js" type="text/javascript" async></script>
+<link rel="stylesheet" href="css/category.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog - User login</title>
+<title>Blog - Browsing by categories</title>
 </head>
 <body>
 <div class="container-xl p-0">
@@ -18,7 +18,7 @@
                     <li class="col-sm">
                         <ul class="navbar-nav">
                             <li>
-                                <a class="navbar-brand" href="index.html">&lt;&lt; The blog &gt;&gt; &lt;&lt; Categories &gt;&gt;</a>
+                                <a class="navbar-brand" href="index.html">&lt;&lt; The blog &gt;&gt; &lt;&lt; Browse by categories &gt;&gt;</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="index.html">Homepage</a>
@@ -46,48 +46,31 @@
         </nav>
     </header>
 
-    <section id="content" class="row" style="margin-top:50px;">
-        <section class="col-sm lead">
-            <article>
-                <p>Author</p>
-                <p class="text-muted"><time datetime="1914-12-20 08:30:45">December 12, 1994 at 8.30 am</time></p>
-                <img src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="430px" height="300px" /><br /><br />
-                <h1>Article title</h1>
-                <p>Topic-related content...<br />Topic related content..<br />Topic related content..
-                <br />Topic related content..<br />Topic related content..<br />Topic related content..
-                <br />Topic related content..</p>
-            </article>
+    <section id="content" class="row container-fluid mt-5 mb-5 align-content-sm-space-between">
+        <section class="col-sm-auto lead mb-3">
+            <img src="https://cdn.pixabay.com/photo/2017/12/17/14/12/bitcoin-3024279_960_720.jpg" width="240px" height="180px" alt="Blockchain" />
+            <a href=""><h2 class="d-block bg-dark text-white p-2 font-weight-light h2-width-240">Business and finance</h2></a>
         </section>
-
-        <aside class="col-sm-auto">
-            <h3><em>Most popular</em></h3>
-            <article>
-                <img alt="Side article image" src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
-                <a href="article.html"><h3>Short title</h3></a>
-                <p class="lead">Short description</p>
-            </article>
-            <article>
-                <img alt="Side article image" src="https://cdn.pixabay.com/photo/2020/01/20/20/39/car-4781370_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
-                <a href="article.html"><h3>Short title</h3></a>
-                <p class="lead">Short description</p>
-            </article>
-            <article>
-                <img alt="Side article image" src="https://cdn.pixabay.com/photo/2015/10/18/17/42/money-994845_960_720.jpg" width="220px" height="150px" style="margin-bottom:10px;" />
-                <a href="article.html"><h3>Short title</h3></a>
-                <p class="lead">Short description</p>
-            </article>
-            <hr />
-            <section>
-                <h3>Subscription</h3>
-                <form id="subscription_form">
-                    <div class="form-group">
-                        <label for="subscription_email" class="lead">Email address</label>
-                        <input type="email" class="form-control form-control-md" id="subscription_email" aria-describedby="emailHelp" minlength="5" required />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </section>
-        </aside>
+        <section class="col-sm-auto lead mb-3">
+            <img src="https://cdn.pixabay.com/photo/2017/08/16/04/52/map-of-europe-2646492_960_720.jpg" width="240px" height="180px" alt="Europe" />
+            <a href=""><h2 class="d-block bg-dark text-white p-2 font-weight-light h2-width-240">Politics</h2></a>
+        </section>
+        <section class="col-sm-auto lead mb-3">
+            <img src="https://cdn.pixabay.com/photo/2017/05/31/15/33/gareth-bale-2360754_960_720.jpg" width="280px" height="180px" alt="Soccer" />
+            <a href=""><h2 class="d-block bg-dark text-white p-2 font-weight-light h2-width-280">Sports</h2></a>
+        </section>
+        <section class="col-sm-auto lead mb-3">
+            <img src="https://cdn.pixabay.com/photo/2017/08/01/23/23/smartphone-2568602_960_720.jpg" width="240px" height="180px" alt="Tech" />
+            <a href=""><h2 class="d-block bg-dark text-white p-2 font-weight-light h2-width-240">Technology</h2></a>
+        </section>
+        <section class="col-sm-auto lead mb-3">
+            <img src="https://cdn.pixabay.com/photo/2015/09/21/13/17/road-949832_960_720.jpg" width="280px" height="180px" alt="Regional" />
+            <a href=""><h2 class="d-block bg-dark text-white p-2 font-weight-light h2-width-280">News from regions all around world</h2></a>
+        </section>
+        <section class="col-sm-auto lead mb-3">
+            <img src="https://cdn.pixabay.com/photo/2018/05/03/11/38/skills-3371153_960_720.jpg" width="280px" height="180px" alt="Regional" />
+            <a href=""><h2 class="d-block bg-dark text-white p-2 font-weight-light h2-width-280">Science and education</h2></a>
+        </section>
     </section>
 
     <footer class="bg-light"><a href="#top">Go to top!</a></footer>
