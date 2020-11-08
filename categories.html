@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog - User login</title>
 </head>
-<body
+<body>
 <div class="container-xl p-0">
     <header class="row" id="top">
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -18,9 +18,9 @@
                     <li class="col-sm">
                         <ul class="navbar-nav">
                             <li>
-                                <a class="navbar-brand" href="index.html">&lt;&lt; The blog &gt;&gt; &lt;&lt; Member Login &gt;&gt;</a>
+                                <a class="navbar-brand" href="index.html">&lt;&lt; The blog &gt;&gt; &lt;&lt; Categories &gt;&gt;</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="index.html">Homepage</a>
                             </li>
                         </ul>
@@ -28,7 +28,7 @@
                     <li class="col-sm">
                         <ul class="navbar-nav justify-content-sm-end">
                             <li class="nav-item">
-                                <a class="nav-link active" href="login.html">Login</a>
+                                <a class="nav-link" href="login.html">Login</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="register.html">Register</a>
@@ -46,22 +46,19 @@
         </nav>
     </header>
 
-    <section id="content" class="row container-fluid mb-5 mt-5">
-        <main class="col-sm pr-4">
-            <h3 class="display-5">User login</h3>
-            <form class="ml-4" id="login_form">
-                <div class="form-group">
-                    <label for="user" class="lead">Username</label>
-                    <input type="text" minlength="5" class="form-control form-control-md" id="user" required />
-                </div>
-                <div class="form-group">
-                    <label for="password" class="lead">Password</label>
-                    <input type="password" minlength="5" class="form-control form-control-md" id="password" required />
-                </div>
-                <button type="submit" class="btn btn-primary">Log in</button>
-            </form>
-        </main>
-        
+    <section id="content" class="row" style="margin-top:50px;">
+        <section class="col-sm lead">
+            <article>
+                <p>Author</p>
+                <p class="text-muted"><time datetime="1914-12-20 08:30:45">December 12, 1994 at 8.30 am</time></p>
+                <img src="https://cdn.pixabay.com/photo/2017/06/05/21/53/big-ben-2375433_960_720.jpg" width="430px" height="300px" /><br /><br />
+                <h1>Article title</h1>
+                <p>Topic-related content...<br />Topic related content..<br />Topic related content..
+                <br />Topic related content..<br />Topic related content..<br />Topic related content..
+                <br />Topic related content..</p>
+            </article>
+        </section>
+
         <aside class="col-sm-auto">
             <h3><em>Most popular</em></h3>
             <article>
@@ -79,22 +76,18 @@
                 <a href="article.html"><h3>Short title</h3></a>
                 <p class="lead">Short description</p>
             </article>
-        </aside>
-    </section>
-
-    <section id="subscription" class="container-fluid mb-5 p-4">
-        <div class="row justify-content-center">
-            <div class="col-auto">
-                <h3 class="display-5">Subscribe to our content</h3>
+            <hr />
+            <section>
+                <h3>Subscription</h3>
                 <form id="subscription_form">
                     <div class="form-group">
                         <label for="subscription_email" class="lead">Email address</label>
-                        <input type="email" class="form-control form-control-md" id="subscription_email" aria-describedby="emailHelp" required />
+                        <input type="email" class="form-control form-control-md" id="subscription_email" aria-describedby="emailHelp" minlength="5" required />
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-            </div>
-        </div>
+            </section>
+        </aside>
     </section>
 
     <footer class="bg-light"><a href="#top">Go to top!</a></footer>
