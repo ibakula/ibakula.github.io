@@ -1,4 +1,4 @@
-section#content section a h2:hover {
+section#content ul li a h2:hover {
     content: " ";
     color:black!important;
     background-color:initial!important;

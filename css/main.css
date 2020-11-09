@@ -1,7 +1,15 @@
+header#top nav {
+    overflow:hidden;
+}
+
 header#top nav,
 header#top nav div ul,
 header#top nav div ul li ul {
     width:100%;
+}
+
+header#top nav ul li ul li a {
+    white-space:pre-wrap;
 }
 
 header#top nav div {
