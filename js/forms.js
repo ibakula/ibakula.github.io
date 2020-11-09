@@ -36,7 +36,7 @@ function _helperFuncUpdateOutputElement(outputName) {
     if (output_div == null) {
         output_div = document.createElement("div");
         output_div.id = outputName;
-        output_div.className = "p-4 mt-3";
+        output_div.setAttribute("role", "alert");
     }
     else {
         if (output_div.childNodes.length > 0) {
@@ -82,10 +82,10 @@ function handleFormSubmit(e, formName, formIndex) {
                 console.log(currentValue);
             });
             output_div.innerHTML += merged + "</p>";
-            output_div.style.backgroundColor = "#c2ffb2";
+            output_div.className = "alert alert-success p-4 mt-3";
         }
         else {
-            output_div.style.backgroundColor = "#ffc2b2";
+            output_div.className = "alert alert-danger p-4 mt-3";
             output_div.innerHTML = "<p>Error: Something seems to went wrong with the input.</p>"
         }
     }
