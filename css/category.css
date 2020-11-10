@@ -1,18 +1,3 @@
-section#content ul li a h2:hover {
-    content: " ";
-    color:black!important;
-    background-color:initial!important;
-    border:1px solid black;
-    padding-left:2rem!important;
-    hyphens:auto;
-    word-break:break-all;
+section#title {
+    background-color:#e3e3e3;
 }
-
-.h2-width-240 {
-    width: 240px;
-}
-
-.h2-width-280 {
-    width: 280px;
-}
-
