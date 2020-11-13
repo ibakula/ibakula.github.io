@@ -1,6 +1,18 @@
 var sliderBackground = document.getElementById("featured");
 var sliderLeftCtrl = document.getElementById("left");
 var sliderRightCtrl = document.getElementById("right");
+var sliderData = sliderBackground.firstElementChild.getElementsByClassName("d-none");
+var selection = 0;
+
+function slide() {
+    if (sliderData != null && selection < sliderData.length && sliderBackground != null) {
+        sliderBackground.style.backgroundImage = "url(" + sliderData[selection].firstElementChild.getAttribute("src") + ")";
+        sliderBackground.firstElementChild.lastElementChild.firstElementChild.innerHTML = sliderData[selection].children[1].innerHTML;
+        sliderBackground.firstElementChild.lastElementChild.lastElementChild.innerHTML = sliderData[selection].children[2].innerHTML;
+    }
+}
+
+slide();
 
 if (sliderLeftCtrl != null) {
     sliderLeftCtrl.addEventListener("click", function(e) { handleLeftClickCtrl(e); });
