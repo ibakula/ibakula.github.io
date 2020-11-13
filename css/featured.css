@@ -1,5 +1,10 @@
 section#featured {
     background-color:#e3e3e3;
+    background-image:url("https://cdn.pixabay.com/photo/2017/12/14/09/41/new-zealand-3018634_960_720.jpg");
+    background-repeat:no-repeat;
+    background-position:0px -150px;
+    background-size:100% 720px;
+    background-origin:border-box;
     width:100%;
     height:300px;
     position:relative;
@@ -8,8 +13,17 @@ section#featured {
 }
 
 /* Carousel left/right styling rules */
-section#featured div div {
+section#featured > div {
+    width:80%;
+    height:80%
+}
+
+section#featured div > div {
     text-align:center;
+    width:100%;
+    height:85%;
+    overflow:hidden;
+    padding-top:0.5em;
 }
 
 section#featured div a {
@@ -24,12 +38,14 @@ section#featured div a#left {
     position:absolute;
     top: calc(50% - 2ex);
     left:30px;
+    background-color:#000000a1;
 }
 
 section#featured div a#right {
     position:absolute;
     top:calc(50% - 2ex);
     right:30px;
+    background-color:#000000a1;
 }
 
 /* Ref. to div container for carousel text */
@@ -39,6 +55,8 @@ section#featured div div h2{
 }
 
 section#featured div div p, section#featured div div h2 {
-    width:auto;
-    background-color:#d2d2d235;
+    background-color:#000000a1;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
