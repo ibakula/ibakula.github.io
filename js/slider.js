@@ -3,6 +3,7 @@ var sliderLeftCtrl = document.getElementById("left");
 var sliderRightCtrl = document.getElementById("right");
 var sliderData = sliderBackground.firstElementChild.getElementsByClassName("d-none");
 var selection = 0;
+var time = 500000;
 
 function slide() {
     if (sliderData != null && selection < sliderData.length && sliderBackground != null) {
@@ -26,13 +27,13 @@ function handleLeftClickCtrl(e) {
     if (selection > 0) {
         --selection;
     }
-    else selection = (sliderData.length - 1);
+    else selection = (sliderData.length-1);
     
     slide();
 }
 
 function handleRightClickCtrl(e) {
-    if (selection < sliderData.length) {
+    if (selection < (sliderData.length-1)) {
         ++selection;
     }
     else selection = 0;
