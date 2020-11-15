@@ -4,12 +4,12 @@ header#top nav div ul li ul {
     width:100%;
 }
 
-header#top nav ul li ul li a {
-    white-space:pre-wrap;
+header#top nav ul {
+    flex-grow: 1;
 }
 
-header#top nav div {
-    flex-grow: 1;
+header#top nav ul li ul li a {
+    white-space:pre-wrap;
 }
 
 header#top div nav div div ul li + li ul {
