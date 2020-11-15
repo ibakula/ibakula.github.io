@@ -3,7 +3,7 @@ section#featured {
     /* Start: This is just default ruleset for images displayed */
     background-repeat:no-repeat;
     background-position:0px -150px;
-    background-size:100% 720px;
+    background-size:cover;
     background-origin:border-box;
     /* End: This is just default ruleset for images displayed */
     width:100%;
