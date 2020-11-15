@@ -23,9 +23,19 @@ if (sliderRightCtrl != null) {
 }
 
 function handleLeftClickCtrl(e) {
-    sliderBackground.style.backgroundImage = "url(\"https://cdn.pixabay.com/photo/2014/05/02/23/46/bridge-336475_960_720.jpg\")";
+    if (selection > 0) {
+        --selection;
+    }
+    else selection = (sliderData.length - 1);
+    
+    slide();
 }
 
 function handleRightClickCtrl(e) {
-    sliderBackground.style.backgroundImage = "url(\"https://cdn.pixabay.com/photo/2016/02/19/11/25/supreme-court-building-1209701_960_720.jpg\")";
+    if (selection < sliderData.length) {
+        ++selection;
+    }
+    else selection = 0;
+    
+    slide();
 }
