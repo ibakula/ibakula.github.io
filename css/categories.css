@@ -1,9 +1,8 @@
-section#content ul li a h2:hover {
+#content h2:hover {
     color:black!important;
     background-color:initial!important;
     border:1px solid black;
     padding-left:2rem!important;
-    hyphens:auto;
     word-break:break-all;
 }
 
